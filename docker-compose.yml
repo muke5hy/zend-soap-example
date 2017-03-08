@@ -1,0 +1,18 @@
+
+version: '2'
+
+services:
+  zf:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www
+    networks:
+      - docker-net
+
+networks:
+  docker-net:
+    external: true
+
+
